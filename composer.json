@@ -1,0 +1,21 @@
+{
+	"name" : "forxer/kalaho",
+	"description" : "A starting point for using forxer/tao",
+	"license" : "MIT",
+	"type" : "project",
+	"authors" : [{
+			"name" : "Vincent Garnier",
+			"email" : "forxer@gmail.com",
+			"homepage" : "http://forx.fr",
+			"role" : "developper"
+		}
+	],
+	"minimum-stability" : "dev",
+	"require" : {
+		"php" : ">=5.4",
+		"forxer/tao" : "dev-master"
+	},
+	"support" : {
+		"issues" : "https://github.com/forxer/kalaho/issues"
+	}
+}

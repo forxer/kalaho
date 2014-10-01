@@ -1,0 +1,6 @@
+
+# composer
+/vendor
+
+# misc
+/test.php

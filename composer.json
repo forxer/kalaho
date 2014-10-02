@@ -17,5 +17,10 @@
 	},
 	"support" : {
 		"issues" : "https://github.com/forxer/kalaho/issues"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Application\\" : "Application"
+		}
 	}
 }

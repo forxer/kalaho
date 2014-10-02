@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "37c87040ae497ff267eb89a4d301ca76",
+    "hash": "cf34653523eea1afa1829e02d75972c4",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -544,16 +544,16 @@
         },
         {
             "name": "forxer/tao",
-            "version": "dev-master",
+            "version": "dev-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/forxer/tao.git",
-                "reference": "05ef2c3158a372dd30202889a84b9db5857f9f7b"
+                "reference": "fbfb16f06aae09cea24ff048c698d7efdcebdab7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/forxer/tao/zipball/05ef2c3158a372dd30202889a84b9db5857f9f7b",
-                "reference": "05ef2c3158a372dd30202889a84b9db5857f9f7b",
+                "url": "https://api.github.com/repos/forxer/tao/zipball/fbfb16f06aae09cea24ff048c698d7efdcebdab7",
+                "reference": "fbfb16f06aae09cea24ff048c698d7efdcebdab7",
                 "shasum": ""
             },
             "require": {
@@ -598,7 +598,7 @@
                 "framework",
                 "php"
             ],
-            "time": "2014-10-01 13:50:14"
+            "time": "2014-10-02 16:06:47"
         },
         {
             "name": "fzaninotto/faker",

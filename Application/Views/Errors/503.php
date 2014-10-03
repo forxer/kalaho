@@ -2,7 +2,9 @@
 
 $view->extend('Layout');
 
-$app['page']->addTitle('Service indisponible');
+$view['titleTag']->add('Service indisponible');
+
+$view['breadcrumb']->add('Service indisponible');
 
 ?>
 

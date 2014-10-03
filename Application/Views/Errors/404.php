@@ -2,7 +2,9 @@
 
 $view->extend('Layout');
 
-$app['page']->addTitle('Document non trouvé');
+$view['titleTag']->add('Document non trouvé');
+
+$view['breadcrumb']->add('Document non trouvé');
 
 ?>
 

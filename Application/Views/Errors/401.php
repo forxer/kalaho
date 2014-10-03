@@ -2,7 +2,9 @@
 
 $view->extend('Layout');
 
-$app['page']->addTitle('Non autorisé');
+$view['titleTag']->add('Non autorisé');
+
+$view['breadcrumb']->add('Non autorisé');
 
 ?>
 

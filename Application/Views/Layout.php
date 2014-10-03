@@ -1,8 +1,8 @@
 <?php
 
-$app['page']->titleTag->add('Kalaho', true);
+$view['titleTag']->add('Kalaho', true);
 
-$app['page']->breadcrumb->add('Accueil', $view->generateUrl('index'), true);
+$view['breadcrumb']->add('Accueil', $view->generateUrl('index'), true);
 
 ?><!DOCTYPE html>
 <html lang="fr">
@@ -12,7 +12,7 @@ $app['page']->breadcrumb->add('Accueil', $view->generateUrl('index'), true);
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title><?php echo $view->escape($app['page']->titleTag->get(' - ')) ?></title>
+	<title><?php echo $view->escape($view['titleTag']->get(' - ')) ?></title>
 
 	<!--[if lt IE 9]>
 	<script src="<?php echo $view['assets']->getUrl('html5shiv/dist/html5shiv.min.js', 'components') ?>"></script>

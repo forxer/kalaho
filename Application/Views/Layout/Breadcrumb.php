@@ -1,7 +1,7 @@
 
-<?php if ($app['page']->breadcrumb->getNumItems() > 1) : ?>
+<?php if ($view['breadcrumb']->getNumItems() > 1) : ?>
 <ul class="breadcrumb">
-<?php foreach ($app['page']->breadcrumb->getAll() as $breadcrumbItem) : ?>
+<?php foreach ($view['breadcrumb']->getAll() as $breadcrumbItem) : ?>
 	<li<?php if ($breadcrumbItem['isLast']) : ?> class="active"<?php endif ?>>
 		<?php if ($breadcrumbItem['isLast']) : ?>
 		<?php echo $view->escape($breadcrumbItem['label']) ?>

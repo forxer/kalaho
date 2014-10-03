@@ -39,7 +39,7 @@ foreach ($queries as $dbLog) {
 				elseif ($execTime > 1) {
 					echo 'text-danger';
 				}
-				?>"><?php echo $view->number($execTime, 4) ?> s</strong>
+				?>"><?php echo $view['modifier']->number($execTime, 4) ?> s</strong>
 			</li>
 			<li class="list-group-item">
 				Temps d’execution des requêtes à la base de données
@@ -56,7 +56,7 @@ foreach ($queries as $dbLog) {
 				elseif ($fExec > 0.1) {
 					echo 'text-danger';
 				}
-				?>"><?php echo $view->number($fExec, 4) ?> s</strong>
+				?>"><?php echo $view['modifier']->number($fExec, 4) ?> s</strong>
 			</li>
 			<li class="list-group-item">
 				Nombre total de requêtes à la base de données
@@ -104,7 +104,7 @@ foreach ($queries as $dbLog) {
 				<?php foreach ($queries as $dbLog) : ?>
 				<tr>
 					<td><?php echo SqlFormatter::format($dbLog['sql']) ?></td>
-					<td><?php echo $view->number($dbLog['executionMS'], 4) ?> s</td>
+					<td><?php echo $view['modifier']->number($dbLog['executionMS'], 4) ?> s</td>
 				</tr>
 				<?php endforeach ?>
 			</tbody>

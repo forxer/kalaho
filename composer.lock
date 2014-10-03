@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cf34653523eea1afa1829e02d75972c4",
+    "hash": "a692f66a022d629c09ed1c0a3e1e2b15",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -548,12 +548,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/forxer/tao.git",
-                "reference": "9aa6789dcaa031586e3e648ced9439ab4c09a530"
+                "reference": "e35d94063327ed0a246d96fc9c7e4a695c02ad0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/forxer/tao/zipball/9aa6789dcaa031586e3e648ced9439ab4c09a530",
-                "reference": "9aa6789dcaa031586e3e648ced9439ab4c09a530",
+                "url": "https://api.github.com/repos/forxer/tao/zipball/e35d94063327ed0a246d96fc9c7e4a695c02ad0a",
+                "reference": "e35d94063327ed0a246d96fc9c7e4a695c02ad0a",
                 "shasum": ""
             },
             "require": {
@@ -576,7 +576,7 @@
                 "symfony/yaml": "~2.5",
                 "zendframework/zend-escaper": "~2.3"
             },
-            "type": "project",
+            "type": "library",
             "autoload": {
                 "psr-4": {
                     "Tao\\": "src/Tao"
@@ -593,13 +593,13 @@
                     "homepage": "http://forx.fr"
                 }
             ],
-            "description": "Small PHP applications framework",
+            "description": "Tiny and lightweight PHP proto-framework based on famous libraries.",
             "homepage": "https://github.com/forxer/tao",
             "keywords": [
                 "framework",
                 "php"
             ],
-            "time": "2014-10-03 20:24:51"
+            "time": "2014-10-03 20:35:04"
         },
         {
             "name": "fzaninotto/faker",

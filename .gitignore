@@ -8,8 +8,8 @@
 !/Application/Storage/Logs/.gitkeep
 
 # Bower components
-/www/Components/**
-!/www/Components/.gitkeep
+/web/Components/**
+!/web/Components/.gitkeep
 
 # Composer packages
 /vendor

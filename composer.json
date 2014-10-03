@@ -22,5 +22,13 @@
 		"psr-4" : {
 			"Application\\" : "Application"
 		}
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"bower install"
+		],
+		"post-update-cmd": [
+			"bower install"
+		]
 	}
 }

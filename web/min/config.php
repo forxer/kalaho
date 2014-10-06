@@ -43,14 +43,14 @@ $min_errorLogger = false;
  * In 'debug' mode, Minify combines files with no minification and adds comments
  * to indicate line #s of the original files.
  */
-$min_allowDebugFlag = true;
+$min_allowDebugFlag = $appConfig['debug'];
 
 
 /**
  * For best performance, specify your temp directory here. Otherwise Minify
  * will have to load extra code to guess. Some examples below:
  */
-$min_cachePath = $appConfig['dir.cache'].'/minify';
+$min_cachePath = $appConfig['dir.cache'].'/Minify';
 //$min_cachePath = 'c:\\WINDOWS\\Temp';
 //$min_cachePath = '/tmp';
 //$min_cachePath = preg_replace('/^\\d+;/', '', session_save_path());

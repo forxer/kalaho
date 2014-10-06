@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1d2704b7db513cd5b2a4d297ba7bbf49",
+    "hash": "d81696ef1877f24fda9536ef853e2e57",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -584,16 +584,16 @@
         },
         {
             "name": "forxer/tao",
-            "version": "dev-master",
+            "version": "0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/forxer/tao.git",
-                "reference": "d5624aa826b61ce935c8a270eb56c67033249781"
+                "reference": "0a0fc77d2f357b34829407cfaf715230768938a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/forxer/tao/zipball/d5624aa826b61ce935c8a270eb56c67033249781",
-                "reference": "d5624aa826b61ce935c8a270eb56c67033249781",
+                "url": "https://api.github.com/repos/forxer/tao/zipball/0a0fc77d2f357b34829407cfaf715230768938a8",
+                "reference": "0a0fc77d2f357b34829407cfaf715230768938a8",
                 "shasum": ""
             },
             "require": {
@@ -642,7 +642,7 @@
                 "framework",
                 "php"
             ],
-            "time": "2014-10-06 11:09:33"
+            "time": "2014-10-06 14:43:32"
         },
         {
             "name": "fzaninotto/faker",
@@ -1633,9 +1633,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "forxer/tao": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "platform": {
         "php": ">=5.4"

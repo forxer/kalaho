@@ -13,7 +13,7 @@
 	"minimum-stability" : "dev",
 	"require" : {
 		"php" : ">=5.4",
-		"forxer/tao" : "dev-master"
+		"forxer/tao" : "0.3"
 	},
 	"support" : {
 		"issues" : "https://github.com/forxer/kalaho/issues"

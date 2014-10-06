@@ -14,6 +14,8 @@ $view['breadcrumb']->add('Accueil', $view->generateUrl('index'), true);
 
 	<title><?php echo $view->escape($view['titleTag']->get(' - ')) ?></title>
 
+	<link rel="stylesheet" type="text/css" href="/min/g=css">
+
 	<!--[if lt IE 9]>
 	<script src="<?php echo $view['assets']->getUrl('html5shiv/dist/html5shiv.min.js', 'components') ?>"></script>
 	<script src="<?php echo $view['assets']->getUrl('respond/dest/respond.min.js', 'components') ?>"></script>
@@ -47,6 +49,8 @@ $view['breadcrumb']->add('Accueil', $view->generateUrl('index'), true);
 	<footer id="main-footer">
 		Copyright <?php echo date('Y') ?>
 	</footer><!-- #main-footer -->
+
+	<script type="text/javascript" charset="utf8" src="/min/g=js"></script>
 
 	<?php $view['slots']->output('script') ?>
 

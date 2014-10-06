@@ -1,6 +1,7 @@
 {
 	"name": "Kalaho",
 	"dependencies": {
+		"bootstrap" : 				"3.2.*",
 		"fontawesome" :				"4.*",
 		"holderjs" : 				"2.4.*",
 		"html5shiv" : 				"3.*",

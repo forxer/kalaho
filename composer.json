@@ -13,7 +13,7 @@
 	"minimum-stability" : "dev",
 	"require" : {
 		"php" : ">=5.4",
-		"forxer/tao" : "dev-dev"
+		"forxer/tao" : "dev-master"
 	},
 	"support" : {
 		"issues" : "https://github.com/forxer/kalaho/issues"
@@ -23,12 +23,14 @@
 			"Application\\" : "Application"
 		}
 	},
-	"scripts": {
-		"post-install-cmd": [
-			"bower install"
+	"scripts" : {
+		"post-install-cmd" : [
+			"bower install",
+			"composer dumpautoload -o"
 		],
-		"post-update-cmd": [
-			"bower install"
+		"post-update-cmd" : [
+			"bower install",
+			"composer dumpautoload -o"
 		]
 	}
 }

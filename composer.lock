@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d81696ef1877f24fda9536ef853e2e57",
+    "hash": "d1e0f023d7fd906bb6f3bb7495dde836",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -584,23 +584,24 @@
         },
         {
             "name": "forxer/tao",
-            "version": "0.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/forxer/tao.git",
-                "reference": "0a0fc77d2f357b34829407cfaf715230768938a8"
+                "reference": "2d1f821d5a9bcdd664ada9f9cae8ab18cb229711"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/forxer/tao/zipball/0a0fc77d2f357b34829407cfaf715230768938a8",
-                "reference": "0a0fc77d2f357b34829407cfaf715230768938a8",
+                "url": "https://api.github.com/repos/forxer/tao/zipball/2d1f821d5a9bcdd664ada9f9cae8ab18cb229711",
+                "reference": "2d1f821d5a9bcdd664ada9f9cae8ab18cb229711",
                 "shasum": ""
             },
             "require": {
                 "doctrine/dbal": "~2.4",
                 "ezyang/htmlpurifier": "~4.6",
                 "filp/whoops": "1.1",
-                "fzaninotto/faker": "dev-master",
+                "fzaninotto/faker": "~1.4",
+                "guzzlehttp/guzzle": "~4.2",
                 "imagine/imagine": "~0.6",
                 "jdorn/sql-formatter": "~1.2",
                 "monolog/monolog": "~1.10",
@@ -610,6 +611,7 @@
                 "patchwork/utf8": "~1.1",
                 "pimple/pimple": "~3.0",
                 "raveren/kint": "~0.9",
+                "swiftmailer/swiftmailer": "~5.3",
                 "symfony/config": "~2.5",
                 "symfony/filesystem": "~2.5",
                 "symfony/finder": "~2.5",
@@ -642,7 +644,7 @@
                 "framework",
                 "php"
             ],
-            "time": "2014-10-06 14:43:32"
+            "time": "2014-10-07 21:59:19"
         },
         {
             "name": "fzaninotto/faker",
@@ -693,6 +695,124 @@
                 "fixtures"
             ],
             "time": "2014-10-01 07:35:35"
+        },
+        {
+            "name": "guzzlehttp/guzzle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/guzzle.git",
+                "reference": "66fd916e9f9130bc22c51450476823391cb2f67c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/66fd916e9f9130bc22c51450476823391cb2f67c",
+                "reference": "66fd916e9f9130bc22c51450476823391cb2f67c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/streams": "~2.1",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "ext-curl": "*",
+                "phpunit/phpunit": "~4.0",
+                "psr/log": "~1.0"
+            },
+            "suggest": {
+                "ext-curl": "Guzzle will use specific adapters if cURL is present"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "client",
+                "curl",
+                "framework",
+                "http",
+                "http client",
+                "rest",
+                "web service"
+            ],
+            "time": "2014-10-05 19:29:14"
+        },
+        {
+            "name": "guzzlehttp/streams",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/streams.git",
+                "reference": "30d5c8e7646e004768054c4143a433c89bc9ece0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/streams/zipball/30d5c8e7646e004768054c4143a433c89bc9ece0",
+                "reference": "30d5c8e7646e004768054c4143a433c89bc9ece0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Stream\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "Provides a simple abstraction over streams of data (Guzzle 4+)",
+            "homepage": "http://guzzlephp.org/",
+            "keywords": [
+                "Guzzle",
+                "stream"
+            ],
+            "time": "2014-09-15 01:45:40"
         },
         {
             "name": "imagine/imagine",
@@ -1226,6 +1346,58 @@
             "time": "2014-09-08 13:50:01"
         },
         {
+            "name": "swiftmailer/swiftmailer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swiftmailer/swiftmailer.git",
+                "reference": "613354e08fbddce0943646932b007be9873c658f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/613354e08fbddce0943646932b007be9873c658f",
+                "reference": "613354e08fbddce0943646932b007be9873c658f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.3-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "lib/swift_required.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Corbyn"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Swiftmailer, free feature-rich PHP mailer",
+            "homepage": "http://swiftmailer.org",
+            "keywords": [
+                "mail",
+                "mailer"
+            ],
+            "time": "2014-10-05 19:53:07"
+        },
+        {
             "name": "symfony/config",
             "version": "dev-master",
             "target-dir": "Symfony/Component/Config",
@@ -1374,12 +1546,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "8f39f4c3a2903883898d1026f781f0f42672f9bc"
+                "reference": "c24942a7ec2d8409d1f60d02c4460ca8317e885a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/8f39f4c3a2903883898d1026f781f0f42672f9bc",
-                "reference": "8f39f4c3a2903883898d1026f781f0f42672f9bc",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/c24942a7ec2d8409d1f60d02c4460ca8317e885a",
+                "reference": "c24942a7ec2d8409d1f60d02c4460ca8317e885a",
                 "shasum": ""
             },
             "require": {
@@ -1418,7 +1590,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
-            "time": "2014-10-03 05:26:43"
+            "time": "2014-10-07 14:06:18"
         },
         {
             "name": "symfony/routing",
@@ -1427,12 +1599,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing.git",
-                "reference": "1c7785e21edd87da5570fc0182742bf66f95b52d"
+                "reference": "11ed40b4b85222865ac4d01d0f64696d42f32fd9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Routing/zipball/1c7785e21edd87da5570fc0182742bf66f95b52d",
-                "reference": "1c7785e21edd87da5570fc0182742bf66f95b52d",
+                "url": "https://api.github.com/repos/symfony/Routing/zipball/11ed40b4b85222865ac4d01d0f64696d42f32fd9",
+                "reference": "11ed40b4b85222865ac4d01d0f64696d42f32fd9",
                 "shasum": ""
             },
             "require": {
@@ -1485,7 +1657,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2014-10-01 05:53:11"
+            "time": "2014-10-07 14:17:15"
         },
         {
             "name": "symfony/templating",
@@ -1633,7 +1805,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "forxer/tao": 20
+    },
     "prefer-stable": false,
     "platform": {
         "php": ">=5.4"

@@ -58,7 +58,6 @@ $config = [
 	#-------------------------------------------------
 
 	# Absolute directory paths
-	'dir.tao' 					=> __DIR__ . '/../../Tao',
 	'dir.app' 					=> __DIR__ . '/..',
 	'dir.cache' 				=> __DIR__ . '/../Storage/Cache',
 	'dir.config' 				=> __DIR__ . '/../Config',

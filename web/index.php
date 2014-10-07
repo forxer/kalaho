@@ -11,7 +11,7 @@ define('KALAHO_ENV',
 # Lancement de l'autoload de composer
 $loader = require __DIR__ . '/../vendor/autoload.php';
 
-# Lancement de l'application système
+# Lancement de l'application
 $app = new Tao\Application($loader, require __DIR__ . '/../Application/Config/global.php');
 
 # Exécution de l'application

@@ -16,7 +16,7 @@
 	"minimum-stability" : "dev",
 	"require" : {
 		"php" : ">=5.4",
-		"forxer/tao" : "0.3"
+		"forxer/tao" : "dev-master"
 	},
 	"autoload" : {
 		"psr-4" : {

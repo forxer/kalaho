@@ -25,13 +25,29 @@ $view['breadcrumb']->add('Accueil', $view->generateUrl('index'), true);
 </head>
 <body>
 	<header id="main-header">
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
 
-		<h1>Kalaho</h1>
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">
+						<span class="sr-only">Menu</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="<?php echo $view->generateUrl('index') ?>">Kalaho</a>
+				</div>
 
-		<div id="main-breadcrumb">
+				<div class="collapse navbar-collapse" id="main-menu">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="<?php echo $view->generateUrl('index') ?>" class="active">Accueil</a></li>
+					</ul>
+				</div><!-- #main-menu -->
+			</div><!-- .container-fluid -->
+		</nav>
+		<div id="main-breadcrumb" class="container">
 			<?php echo $view->render('Layout/Breadcrumb') ?>
 		</div><!-- #main-breadcrumb -->
-
 	</header><!-- #main-header -->
 
 	<section id="content">

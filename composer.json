@@ -10,13 +10,13 @@
 			"role" : "developper"
 		}
 	],
+	"support" : {
+		"issues" : "https://github.com/forxer/kalaho/issues"
+	},
 	"minimum-stability" : "dev",
 	"require" : {
 		"php" : ">=5.4",
 		"forxer/tao" : "0.3"
-	},
-	"support" : {
-		"issues" : "https://github.com/forxer/kalaho/issues"
 	},
 	"autoload" : {
 		"psr-4" : {

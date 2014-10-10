@@ -8,6 +8,8 @@ $view['breadcrumb']->add('Non autorisé');
 
 ?>
 
-<h1>Non autorisé</h1>
+<div class="container">
+	<h1>Non autorisé</h1>
 
-<p>L’accès est refusé car vous n’avez pas les permissions suffisantes.</p>
+	<p>L’accès est refusé car vous n’avez pas les permissions suffisantes.</p>
+</div>

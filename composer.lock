@@ -583,12 +583,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/forxer/tao.git",
-                "reference": "6f99bc27a98b5e4828e9cdbbc80025b6d7ebea92"
+                "reference": "650119451dd5fce3d2826461e2234457f4337d5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/forxer/tao/zipball/6f99bc27a98b5e4828e9cdbbc80025b6d7ebea92",
-                "reference": "6f99bc27a98b5e4828e9cdbbc80025b6d7ebea92",
+                "url": "https://api.github.com/repos/forxer/tao/zipball/650119451dd5fce3d2826461e2234457f4337d5b",
+                "reference": "650119451dd5fce3d2826461e2234457f4337d5b",
                 "shasum": ""
             },
             "require": {
@@ -613,6 +613,7 @@
                 "symfony/http-foundation": "~2.5",
                 "symfony/routing": "~2.5",
                 "symfony/templating": "~2.5",
+                "symfony/translation": "~2.5",
                 "symfony/yaml": "~2.5",
                 "zendframework/zend-escaper": "~2.3"
             },
@@ -639,7 +640,7 @@
                 "framework",
                 "php"
             ],
-            "time": "2014-10-08 20:48:43"
+            "time": "2014-10-10 08:28:28"
         },
         {
             "name": "fzaninotto/faker",
@@ -1594,12 +1595,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing.git",
-                "reference": "11ed40b4b85222865ac4d01d0f64696d42f32fd9"
+                "reference": "6e43bd277f1f7e181a65b85813312f428e4926ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Routing/zipball/11ed40b4b85222865ac4d01d0f64696d42f32fd9",
-                "reference": "11ed40b4b85222865ac4d01d0f64696d42f32fd9",
+                "url": "https://api.github.com/repos/symfony/Routing/zipball/6e43bd277f1f7e181a65b85813312f428e4926ab",
+                "reference": "6e43bd277f1f7e181a65b85813312f428e4926ab",
                 "shasum": ""
             },
             "require": {
@@ -1652,7 +1653,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2014-10-07 14:17:15"
+            "time": "2014-10-09 16:12:58"
         },
         {
             "name": "symfony/templating",
@@ -1708,6 +1709,64 @@
             "description": "Symfony Templating Component",
             "homepage": "http://symfony.com",
             "time": "2014-07-09 09:06:26"
+        },
+        {
+            "name": "symfony/translation",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/Translation",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Translation.git",
+                "reference": "adc92684c607801186cc9e3179314b738f0d62d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Translation/zipball/adc92684c607801186cc9e3179314b738f0d62d7",
+                "reference": "adc92684c607801186cc9e3179314b738f0d62d7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/config": "~2.0",
+                "symfony/intl": "~2.3",
+                "symfony/yaml": "~2.2"
+            },
+            "suggest": {
+                "psr/log": "To use logging capability in translator",
+                "symfony/config": "",
+                "symfony/yaml": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Translation\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Translation Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-10-01 05:53:11"
         },
         {
             "name": "symfony/yaml",

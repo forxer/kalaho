@@ -16,4 +16,3 @@ $app = new Tao\Application($loader, require __DIR__ . '/../Application/Config/gl
 
 # Exécution de l'application
 $app->run();
-

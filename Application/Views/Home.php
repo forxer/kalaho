@@ -15,44 +15,4 @@ $view->extend('Layout');
 	<h4>Welcome home !</h4>
 
 	<h5>Welcome home !</h5>
-
-	<p>Welcome home !</p>
-
-	<p>Welcome home !</p>
-
-	<p>Welcome home !</p>
-
-	<p>Welcome home !</p>
-
-	<p>Welcome home !</p>
-
-	<p>Welcome home !</p>
-
-	<p>Welcome home !</p>
-
-	<p>Welcome home !</p>
-
-	<p>Welcome home !</p>
-
-	<p>Welcome home !</p>
-
-	<p>Welcome home !</p>
-
-	<p>Welcome home !</p>
-
-	<p>Welcome home !</p>
-
-	<p>Welcome home !</p>
-
-	<p>Welcome home !</p>
-
-	<p>Welcome home !</p>
-
-	<p>Welcome home !</p>
-
-	<p>Welcome home !</p>
-
-	<p>Welcome home !</p>
-
-	<p>Welcome home !</p>
 </div>

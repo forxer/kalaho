@@ -8,6 +8,8 @@ $view['breadcrumb']->add('Service indisponible');
 
 ?>
 
-<h1>Service indisponible</h1>
+<div class="container">
+	<h1>Service indisponible</h1>
 
-<p>Le serveur est actuellement indisponible (car il est en maintenance).</p>
+	<p>Le serveur est actuellement indisponible (car il est en maintenance).</p>
+</div>

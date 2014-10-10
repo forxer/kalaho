@@ -4,7 +4,7 @@
 return [
 
 	# Enable/disable debug mode
-	'debug' 				=> false,
+	'debug' 				=> true,
 
 	# Database connexion configuration
 	# should be doctrine DBAL configuration params prefixed by "db."

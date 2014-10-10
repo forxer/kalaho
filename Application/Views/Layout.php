@@ -2,7 +2,7 @@
 
 $view['titleTag']->add('Kalaho', true);
 
-$view['breadcrumb']->add('Accueil', $view->generateUrl('index'), true);
+$view['breadcrumb']->add('Accueil', $view['router']->generate('index'), true);
 
 ?><!DOCTYPE html>
 <html lang="fr">
@@ -35,12 +35,12 @@ $view['breadcrumb']->add('Accueil', $view->generateUrl('index'), true);
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="<?php echo $view->generateUrl('index') ?>">Kalaho</a>
+					<a class="navbar-brand" href="<?php echo $view['router']->generate('index') ?>">Kalaho</a>
 				</div>
 
 				<div class="collapse navbar-collapse" id="main-menu">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="<?php echo $view->generateUrl('index') ?>" class="active">Accueil</a></li>
+						<li><a href="<?php echo $view['router']->generate('index') ?>" class="active">Accueil</a></li>
 					</ul>
 				</div><!-- #main-menu -->
 			</div><!-- .container-fluid -->
@@ -49,6 +49,10 @@ $view['breadcrumb']->add('Accueil', $view->generateUrl('index'), true);
 			<?php echo $view->render('Layout/Breadcrumb') ?>
 		</div><!-- #main-breadcrumb -->
 	</header><!-- #main-header -->
+
+	<div id="main-messages">
+	<?php echo $view->render('Common/messages') ?>
+	</div><!-- #main-messages -->
 
 	<section id="content">
 
@@ -62,7 +66,7 @@ $view['breadcrumb']->add('Accueil', $view->generateUrl('index'), true);
 
 	</section><!-- #content -->
 
-	<footer id="main-footer">
+	<footer id="main-footer" class="container text-center">
 		Copyright <?php echo date('Y') ?>
 	</footer><!-- #main-footer -->
 

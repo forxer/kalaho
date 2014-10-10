@@ -93,6 +93,7 @@ foreach ($queries as $dbLog) {
 				?>"><?php echo $mem ?></strong>
 			</li>
 		</ul>
+		<?php d($app['request']) ?>
 		<table class="table table-striped" role="grid">
 			<thead>
 				<tr>

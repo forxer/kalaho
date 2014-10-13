@@ -76,6 +76,12 @@ $config = [
 	'logger.class' => 'Monolog\Logger',
 
 
+	# Minify
+	# ----------------------------------------------------------
+
+	'minify.cache_dir' => __DIR__ . '/../Storage/Cache/Minify',
+
+
 	# Routing
 	# ----------------------------------------------------------
 

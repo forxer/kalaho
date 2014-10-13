@@ -74,6 +74,7 @@ $config = [
 	# ----------------------------------------------------------
 
 	'logger.class' => 'Monolog\Logger',
+	'logger.dir' => __DIR__ . '/../Storage/Logs',
 
 
 	# Minify
@@ -137,6 +138,8 @@ $config = [
 	'translator.dir' => __DIR__ . '/../Translations',
 
 	'translator.cache_dir' => __DIR__ . '/../Storage/Cache/Translations',
+
+	'translator.use_default_php_loader' => true,
 
 	'translator.class' => 'Symfony\Component\Translation\Translator',
 	'translator.messages_selector_class' => 'Symfony\Component\Translation\MessageSelector',

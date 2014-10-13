@@ -2,5 +2,5 @@
 
 return [
 	'Menu' => 'Menu',
-	'Home' => 'Home'
+	'Home' => 'Accueil'
 ];

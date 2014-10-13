@@ -4,7 +4,7 @@
 # So the configuration of the local environment is a particular development environment.
 $local_config = [
 
-	'debug' 				=> true,
+	'debug' 				=> false,
 ];
 
 $devConfig = require __DIR__ . '/dev.php';

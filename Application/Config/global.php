@@ -136,6 +136,8 @@ $config = [
 
 	'translator.dir' => __DIR__ . '/../Translations',
 
+	'translator.cache_dir' => __DIR__ . '/../Storage/Cache/Translations',
+
 	'translator.class' => 'Symfony\Component\Translation\Translator',
 	'translator.messages_selector_class' => 'Symfony\Component\Translation\MessageSelector',
 

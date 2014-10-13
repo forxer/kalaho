@@ -16,29 +16,11 @@
 
 $config = [
 
-	#
-	# Common settings
-	#-------------------------------------------------
+	# The application identifier (used internally)
+	'app_id' => 'kalaho',
 
 	# Enable/disable debug mode
 	'debug' 					=> false,
-
-	'accepted_locales' 			=> [
-		'fr' => 'Français',
-		'en' => 'English'
-	],
-
-	'fallback_locale' 			=> 'fr',
-
-	# Database connexion configuration.
-	# Should be doctrine DBAL configuration params prefixed by "db."
-	# see http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html
-	'db.driver'					=> '',
-	'db.host'   				=> '',
-	'db.dbname'   				=> '',
-	'db.user'   				=> '',
-	'db.password'   			=> '',
-	'db.charset' 				=> '',
 
 	# Relative path to the application URL from the hostname.
 	# The value should always begin and end with a slash.
@@ -60,50 +42,111 @@ $config = [
 	# from the app_url configuration (see above).
 	'components_url' 			=> 'Components',
 
-	#
-	# Advanced settings
-	#-------------------------------------------------
 
-	# Absolute directory paths
-	'dir.app' 					=> __DIR__ . '/..',
-	'dir.cache' 				=> __DIR__ . '/../Storage/Cache',
-	'dir.config' 				=> __DIR__ . '/../Config',
-	'dir.controllers' 			=> __DIR__ . '/../Controllers',
-	'dir.logs' 					=> __DIR__ . '/../Storage/Logs',
-	'dir.models' 				=> __DIR__ . '/../Models',
-	'dir.translations' 			=> __DIR__ . '/../Translations',
-	'dir.views' 				=> __DIR__ . '/../Views',
-	'dir.web' 					=> __DIR__ . '/../../web',
+	# Database
+	# ----------------------------------------------------------
 
-	# Dependencies; where the Pimple DIC shows all its power
-	# ('cause you can use other core class by simply configuration setting)
-	'class.dbal.config'				=> 'Doctrine\DBAL\Configuration',
-	'class.dbal.logging'			=> 'Doctrine\DBAL\Logging\DebugStack',
-	'class.dbal.driver.manager'		=> 'Doctrine\DBAL\DriverManager',
-	'class.dbal.query.builder'		=> 'Tao\Database\QueryBuilder',
+	# Database connexion configuration.
+	'database.connection' => [
+		'driver' => '',
+		'host' => '',
+		'dbname' => '',
+		'user' => '',
+		'password' => '',
+		'charset' => ''
+	],
 
-	'class.http.request'			=> 'Symfony\Component\HttpFoundation\Request',
+	'database.config_class' => 'Doctrine\DBAL\Configuration',
+	'database.logger_class' => 'Doctrine\DBAL\Logging\DebugStack',
+	'database.driver_manager_class' => 'Doctrine\DBAL\DriverManager',
+	'database.query_builder_class' => 'Tao\Database\QueryBuilder',
 
-	'class.logger' 					=> 'Monolog\Logger',
+	'database.models_namespace' => 'Application\Models',
 
-	'class.router' 					=> 'Tao\Routing\Router',
 
-	'class.session'					=> 'Tao\Http\Session',
-	'class.session.storage' 		=> 'Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage',
-	'class.session.handler' 		=> '\SessionHandler',
+	# Http
+	# ----------------------------------------------------------
 
-	'class.translator' 				=> 'Symfony\Component\Translation\Translator',
-	'class.translator.messages_selector' => 'Symfony\Component\Translation\MessageSelector',
+	'http.request_class' => 'Symfony\Component\HttpFoundation\Request',
 
-	'class.templating' 				=> 'Tao\Templating\Templating',
-	'class.templating.escaper' 		=> 'Tao\Templating\Escaper\ZendEscaper',
-	'class.templating.loader' 		=> 'Symfony\Component\Templating\Loader\FilesystemLoader',
-	'class.templating.template_name_parser' => 'Symfony\Component\Templating\TemplateNameParser',
 
-	'template.path.patterns'		=> '/%name%.php',
+	# Logger
+	# ----------------------------------------------------------
 
-	'namespace.controllers' 		=> 'Application\Controllers',
-	'namespace.models'				=> 'Application\Models',
+	'logger.class' => 'Monolog\Logger',
+
+
+	# Routing
+	# ----------------------------------------------------------
+
+	# List of directories to search resources
+	'routing.resources_dirs' => [
+		__DIR__ . '/../Config'
+	],
+
+	# Name of resource files
+	'routing.resource_name' => 'routes.yml',
+
+	'routing.controllers_namespace' => 'Application\Controllers',
+
+	'routing.cache_dir' => __DIR__ . '/../Storage/Cache/Router',
+
+	'routing.router_class' => 'Symfony\Component\Routing\Router',
+	'routing.loader_class' => 'Symfony\Component\Routing\Loader\YamlFileLoader',
+	'routing.locator_class' => 'Symfony\Component\Config\FileLocator',
+	'routing.request_context_class' => 'Symfony\Component\Routing\RequestContext',
+
+	'routing.generator_class' => 'Symfony\Component\Routing\Generator\UrlGenerator',
+	'routing.generator_base_class' => 'Symfony\Component\Routing\Generator\UrlGenerator',
+	'routing.generator_dumper_class' => 'Symfony\Component\Routing\Generator\Dumper\PhpGeneratorDumper',
+	'routing.generator_cache_class' => null,
+
+	'routing.matcher_class' => 'Symfony\Component\Routing\Matcher\UrlMatcher',
+	'routing.matcher_base_class' => 'Symfony\Component\Routing\Matcher\UrlMatcher',
+	'routing.matcher_dumper_class' => 'Symfony\Component\Routing\Matcher\Dumper\PhpMatcherDumper',
+	'routing.matcher_cache_class' => null,
+
+	'routing.resource_type' => null,
+	'routing.strict_requirements' => true,
+
+
+	# Session
+	# ----------------------------------------------------------
+
+	'session.class' => 'Tao\Http\Session',
+	'session.storage_class' => 'Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage',
+	'session.handler_class' => '\SessionHandler',
+
+
+	# Translator
+	# ----------------------------------------------------------
+
+	'translator.locales' 			=> [
+		'fr' => 'Français',
+		'en' => 'English'
+	],
+
+	'translator.fallback' 			=> 'fr',
+
+	'translator.dir' => __DIR__ . '/../Translations',
+
+	'translator.class' => 'Symfony\Component\Translation\Translator',
+	'translator.messages_selector_class' => 'Symfony\Component\Translation\MessageSelector',
+
+
+	# Templating
+	# ----------------------------------------------------------
+
+	'templating.path.patterns' => __DIR__ . '/../Views/%name%.php',
+
+	'templating.class' => 'Tao\Templating\Templating',
+	'templating.escaper_class' => 'Tao\Templating\Escaper\ZendEscaper',
+	'templating.loader_class' => 'Symfony\Component\Templating\Loader\FilesystemLoader',
+	'templating.name_parser_class' => 'Symfony\Component\Templating\TemplateNameParser',
+
+	'templating.load_default_helpers' => true,
+
+
 
 	# Cross-Site Request Forgery token name in session
 	'sec.csrf_token_name' 		=> 'csrf_token',

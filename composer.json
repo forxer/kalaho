@@ -16,7 +16,10 @@
 	"minimum-stability" : "dev",
 	"require" : {
 		"php" : ">=5.4",
-		"forxer/tao" : "dev-master"
+		"forxer/tao" : "dev-master",
+		"doctrine/dbal" : "~2.4",
+		"mrclay/minify" : "~2.2",
+		"symfony/translation" : "~2.5"
 	},
 	"autoload" : {
 		"psr-4" : {

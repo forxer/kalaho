@@ -12,7 +12,7 @@ define('KALAHO_ENV',
 $loader = require __DIR__ . '/../vendor/autoload.php';
 
 # Lancement de l'application
-$app = new Tao\Application($loader, require __DIR__ . '/../Application/Config/global.php');
+$app = new Application\Application($loader, require __DIR__ . '/../Application/Config/global.php');
 
 # Exécution de l'application
 $app->run();

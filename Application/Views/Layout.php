@@ -30,7 +30,7 @@ $view['breadcrumb']->add('Accueil', $view['router']->generate('index'), true);
 
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">
-						<span class="sr-only">Menu</span>
+						<span class="sr-only"><?php echo $view['translator']->trans('Menu') ?></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -40,7 +40,24 @@ $view['breadcrumb']->add('Accueil', $view['router']->generate('index'), true);
 
 				<div class="collapse navbar-collapse" id="main-menu">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="<?php echo $view['router']->generate('index') ?>" class="active">Accueil</a></li>
+						<li><a href="<?php echo $view['router']->generate('index') ?>" class="active"><?php echo $view['translator']->trans('Home') ?></a></li>
+						<li class="dropdown">
+
+							<?php foreach ($app['translator.locales'] as $localeCode => $localeTitle) : ?>
+							<?php if ($localeCode == $app['session']->getLanguage()) : ?>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $localeTitle ?> <span class="caret"></span></a>
+							<?php endif ?>
+							<?php endforeach ?>
+
+
+							<ul class="dropdown-menu" role="menu">
+								<?php foreach ($app['translator.locales'] as $localeCode => $localeTitle) : ?>
+								<?php if ($localeCode != $app['session']->getLanguage()) : ?>
+								<li><a href="<?php echo $localeCode ?>"><?php echo $localeTitle ?></a></li>
+								<?php endif ?>
+								<?php endforeach ?>
+							</ul>
+						</li>
 					</ul>
 				</div><!-- #main-menu -->
 			</div><!-- .container-fluid -->

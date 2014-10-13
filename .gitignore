@@ -1,7 +1,7 @@
 
 # application cache
 /Application/Storage/Cache/**
-!/Application/Storage/Cache/**/.gitkeep
+!/Application/Storage/Cache/.gitkeep
 
 # application logs
 /Application/Storage/Logs/**
@@ -12,7 +12,5 @@
 !/web/Components/.gitkeep
 
 # Composer packages
-/vendor
-
-# misc
-/test.php
+/vendor/
+/composer.lock

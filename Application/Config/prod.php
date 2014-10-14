@@ -2,7 +2,13 @@
 
 return [
 
+	# The application identifier (used internally)
+	'app_id' => 'kalaho',
+
 
 	# Enable/disable debug mode
-	'debug' 				=> false
+	'debug' 				=> false,
+
+
+	'routing.controllers_namespace' => 'Application\Controllers',
 ];

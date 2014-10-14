@@ -1,7 +1,6 @@
 <?php
 
-# overload configuration for the development environment
-return [
+$devConfig = [
 
 	# Enable/disable debug mode
 	'debug' 				=> true,
@@ -16,3 +15,8 @@ return [
 		'charset' => 'utf8'
 	]
 ];
+
+
+$config = require __DIR__ . '/prod.php';
+
+return $devConfig + $config;

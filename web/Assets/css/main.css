@@ -3,3 +3,20 @@ body {
 	padding-top: 70px;
 }
 
+
+/* Debug panel */
+#debug-panel {
+	margin-top: 20px;
+}
+.panel-title a:before {
+	font-family: 'Glyphicons Halflings';
+	font-size: 0.8em;
+	content: "\e114\00a0";
+}
+.panel-title a.collapsed:before {
+	content: "\e080\00a0";
+}
+.panel-title a:hover,
+.panel-title a:focus {
+	text-decoration: none;
+}

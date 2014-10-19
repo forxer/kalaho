@@ -1,10 +1,12 @@
 <?php
+use Carbon\Carbon;
 
 $view->extend('Layout');
 
 ?>
 
 <div class="container">
+	<?php echo Carbon::now() ?>
 
 	<h1>Welcome home !</h1>
 

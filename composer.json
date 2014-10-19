@@ -19,7 +19,8 @@
 		"forxer/tao" : "dev-master",
 		"doctrine/dbal" : "~2.4",
 		"mrclay/minify" : "~2.2",
-		"symfony/translation" : "~2.5"
+		"symfony/translation" : "~2.5",
+		"nesbot/carbon" : "~1.13"
 	},
 	"autoload" : {
 		"psr-4" : {

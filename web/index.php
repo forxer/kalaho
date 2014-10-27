@@ -1,12 +1,13 @@
 <?php
 
-# Lancement de l'autoload de composer
+# Chargement  de l'autoload de composer
 $loader = require __DIR__ . '/../vendor/autoload.php';
 
+# Chargement de la configuration de l'application
 //$config = require __DIR__ . '/../Application/Config/prod.php';
 $config = require __DIR__ . '/../Application/Config/dev.php';
 
-# Lancement de l'application
+# Initialisation de l'application
 $app = new Application\Application($loader, $config);
 
 # Exécution de l'application

@@ -2,17 +2,18 @@
 
 $execTime = $app->utilities->getExecutionTime();
 
-$mem = $app->utilities->getMemoryUsage();
+list($memoryUsageValue, $memoryUsageUnit) = $app->utilities->getMemoryUsageData();
+
 
 $iNumQueries = 0;
 
-$fExec = 0;
+$dbExecTime = 0;
 
 $queries = $app['db']->getConfiguration()->getSQLLogger()->queries;
 
 foreach ($queries as $dbLog) {
 	$iNumQueries++;
-	$fExec += $dbLog['executionMS'];
+	$dbExecTime += $dbLog['executionMS'];
 }
 
 ?>
@@ -22,6 +23,8 @@ foreach ($queries as $dbLog) {
 		<div class="panel-heading">
 			<h3 class="panel-title" data-toggle="collapse" data-target="#debug">
 				<a class="collapsed" data-toggle="collapse" href="#debug-body">Informations sur l’exécution de l’application</a>
+				<span class="pull-right"><?php echo $view['modifier']->number($execTime, 4) ?> s -
+				<?php echo $view['modifier']->number($memoryUsageValue, 2) ?> <?php echo $memoryUsageUnit ?></span>
 			</h3>
 		</div>
 		<div class="panel-body collapse" id="debug-body">
@@ -44,60 +47,82 @@ foreach ($queries as $dbLog) {
 					?>"><?php echo $view['modifier']->number($execTime, 4) ?> s</strong>
 				</li>
 				<li class="list-group-item">
-					Temps d’execution des requêtes à la base de données
-					<strong class="pull-right <?php
-					if ($fExec < 0.005) {
-						echo 'text-success';
-					}
-					elseif ($fExec < 0.05) {
-						echo 'text-info';
-					}
-					elseif ($fExec > 0.05 && $fExec < 0.1) {
-						echo 'text-warning';
-					}
-					elseif ($fExec > 0.1) {
-						echo 'text-danger';
-					}
-					?>"><?php echo $view['modifier']->number($fExec, 4) ?> s</strong>
-				</li>
-				<li class="list-group-item">
 					Nombre total de requêtes à la base de données
 					<strong class="pull-right <?php
-					if ($fExec < 5) {
+					if ($iNumQueries < 5) {
 						echo 'text-success';
 					}
-					elseif ($fExec < 10) {
+					elseif ($iNumQueries < 10) {
 						echo 'text-info';
 					}
-					elseif ($fExec > 10 && $fExec < 20) {
+					elseif ($iNumQueries > 10 && $iNumQueries < 20) {
 						echo 'text-warning';
 					}
-					elseif ($fExec > 20) {
+					elseif ($iNumQueries > 20) {
 						echo 'text-danger';
 					}
 					?>"><?php echo $iNumQueries ?></strong>
 				</li>
+				<?php if ($iNumQueries > 0) : ?>
+				<li class="list-group-item">
+					Temps d’execution des requêtes à la base de données
+					<strong class="pull-right <?php
+					if ($dbExecTime < 0.005) {
+						echo 'text-success';
+					}
+					elseif ($dbExecTime < 0.05) {
+						echo 'text-info';
+					}
+					elseif ($dbExecTime > 0.05 && $dbExecTime < 0.1) {
+						echo 'text-warning';
+					}
+					elseif ($dbExecTime > 0.1) {
+						echo 'text-danger';
+					}
+					?>"><?php echo $view['modifier']->number($dbExecTime, 4) ?> s</strong>
+				</li>
+				<?php endif ?>
 				<li class="list-group-item">
 					Quantité de mémoire utilisée par l’application
 					<strong class="pull-right <?php
-					if ($fExec < 5) {
+					if ($memoryUsageValue < 5) {
 						echo 'text-success';
 					}
-					elseif ($fExec < 10) {
+					elseif ($memoryUsageValue < 10) {
 						echo 'text-info';
 					}
-					elseif ($fExec > 10 && $fExec < 20) {
+					elseif ($memoryUsageValue > 10 && $dbExecTime < 20) {
 						echo 'text-warning';
 					}
-					elseif ($fExec > 20) {
+					elseif ($memoryUsageValue > 20) {
 						echo 'text-danger';
 					}
-					?>"><?php echo $mem ?></strong>
+					?>"><?php echo $view['modifier']->number($memoryUsageValue, 2) ?> <?php echo $memoryUsageUnit ?></strong>
 				</li>
 				<li class="list-group-item">
 					Version PHP <strong class="pull-right"><?php echo PHP_VERSION ?></strong></li>
 				</li>
 			</ul>
+
+			<ul class="list-group">
+				<li class="list-group-item">
+					Route <code>$app['request']->attributes->get('_route')</code>
+					<strong class="pull-right"><?php echo $app['request']->attributes->get('_route') ?></strong>
+				</li>
+				<li class="list-group-item">
+					Controller <code>$app['request']->attributes->get('_controller')</code>
+					<strong class="pull-right"><?php echo $app['request']->attributes->get('_controller') ?></strong>
+				</li>
+				<li class="list-group-item">
+					Controller class <code>$app['request']->attributes->get('controller_class')</code>
+					<strong class="pull-right"><?php echo $app['request']->attributes->get('controller_class') ?></strong>
+				</li>
+				<li class="list-group-item">
+					Controller method <code>$app['request']->attributes->get('controller_method')</code>
+					<strong class="pull-right"><?php echo $app['request']->attributes->get('controller_method') ?></strong>
+				</li>
+			</ul>
+
 			<?php if ($iNumQueries > 0) : ?>
 			<table class="table table-striped" role="grid">
 				<thead>

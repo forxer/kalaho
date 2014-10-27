@@ -91,7 +91,7 @@ $view['breadcrumb']->add('Accueil', $view['router']->generate('index'), true);
 
 	<?php $view['slots']->output('script') ?>
 
-	<?php # Affichage log database
+	<?php # Affichage des informations sur l'exécution de l'application
 	if ($app['debug']) : ?>
 		<?php echo $view->render('Layout/DebugInfos') ?>
 	<?php endif ?>

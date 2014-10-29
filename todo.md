@@ -1,0 +1,5 @@
+# todo
+
+- console
+- contact
+- validator

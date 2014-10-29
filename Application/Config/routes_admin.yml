@@ -1,0 +1,10 @@
+
+
+# La page d'accueil de l'administration
+# ----------------------------------------------------------------------
+
+index:
+  path:     /
+  defaults: 
+    _controller: 'Index::home'
+    

@@ -3,8 +3,8 @@ namespace Application;
 
 use Symfony\Component\Templating\Asset\PathPackage;
 use Tao\Application as TaoApplication;
-use Tao\Database\DatabaseServiceProvider;
-use Tao\Translator\TranslatorServiceProvider;
+use Tao\Provider\DatabaseServiceProvider;
+use Tao\Provider\TranslatorServiceProvider;
 use Tao\Translator\TemplatingHelper;
 
 class Application extends TaoApplication

@@ -43,3 +43,7 @@ remove_trailing_slash:
     requirements:
       url: .*/$
       _method: GET
+
+#admin:
+#    resource: routes_admin.yml
+#    prefix:   /admin
